@@ -114,6 +114,7 @@ ggplot(data=housing, aes(x=log_sqft_lot, y=log_price), ) + geom_point() + labs(t
   labs(x = "log(Sqft_lot)", y = "log(price)", color = "Legend") + scale_color_manual(values = colors) + theme(legend.position = c(.15,.85))
 #'
 #' ## Part E
+par(mfrow=c(2,3))
 fits = list(fit.ls, fit2.ls)
 regress = c('log(sqft)', 'log(sqft_lot)')
 for(i in 1:2){
